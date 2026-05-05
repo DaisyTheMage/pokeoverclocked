@@ -561,11 +561,11 @@ static void VBlankCB(void)
 
 void CB2_InitTitleScreen(void)
 {
-    if (IS_FRLG)
-    {
-        CB2_InitTitleScreenFrlg();
-        return;
-    }
+    // if (IS_FRLG)
+    // {
+    //     CB2_InitTitleScreenFrlg();
+    //     return;
+    // }
     switch (gMain.state)
     {
     default:
@@ -655,7 +655,7 @@ void CB2_InitTitleScreen(void)
                                     | DISPCNT_OBJ_ON
                                     | DISPCNT_WIN0_ON
                                     | DISPCNT_OBJWIN_ON);
-        m4aSongNumStart(MUS_TITLE);
+        m4aSongNumStart(MUS_INTRO);
         gMain.state = 5;
         break;
     case 5:
